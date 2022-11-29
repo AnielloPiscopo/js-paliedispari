@@ -1,6 +1,6 @@
 const palindromeSectionTextInputElement = document.querySelector('#palindrome-word-analyser input');
 const palindromeSectionFormElement = document.querySelector('#palindrome-word-analyser form');
-const palindromeSectionFormBtnElement = document.querySelector('form a.my-btn');
+const palindromeSectionFormBtnElement = document.querySelector('#palindrome-word-analyser form a.my-btn');
 
 
 palindromeSectionFormBtnElement.addEventListener('click', function(){
