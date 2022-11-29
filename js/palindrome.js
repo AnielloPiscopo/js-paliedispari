@@ -1,6 +1,6 @@
 const textInputElement = document.querySelector('#palindrome-word-analyser input');
-const formElement = document.querySelector('form');
-const formBtnElement = document.querySelector('form .my-btn');
+const formElement = document.querySelector('#palindrome-word-analyser form');
+const formBtnElement = document.querySelector('form a.my-btn');
 
 
 formBtnElement.addEventListener('click', function(){
@@ -25,7 +25,7 @@ function isPalindrome(word){
     }
 
     
-    let finalComment = (word == reversedWord) ? 'La parola è palindroma' : 'La parola non è palindroma';
+    let finalComment = ((word == reversedWord) && (word != '')) ? 'La parola è palindroma' : 'La parola non è palindroma';
 
     console.log(reversedWord)
     return finalComment;
