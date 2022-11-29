@@ -1,16 +1,16 @@
-const textInputElement = document.querySelector('#palindrome-word-analyser input');
-const formElement = document.querySelector('#palindrome-word-analyser form');
-const formBtnElement = document.querySelector('form a.my-btn');
+const palindromeSectionTextInputElement = document.querySelector('#palindrome-word-analyser input');
+const palindromeSectionFormElement = document.querySelector('#palindrome-word-analyser form');
+const palindromeSectionFormBtnElement = document.querySelector('form a.my-btn');
 
 
-formBtnElement.addEventListener('click', function(){
-    let userWord = textInputElement.value;
+palindromeSectionFormBtnElement.addEventListener('click', function(){
+    let userWord = palindromeSectionTextInputElement.value;
     const pElement = document.createElement('p');
     
 
     pElement.innerHTML = isPalindrome(userWord);
 
-    formElement.after(pElement);
+    palindromeSectionFormElement.after(pElement);
 })
 
 
