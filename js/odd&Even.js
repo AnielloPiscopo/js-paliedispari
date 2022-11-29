@@ -2,6 +2,7 @@ const oddVsEvenSectionForm = document.querySelector('#odd-vs-even form');
 const oddInputRadio = document.querySelector('#odd-vs-even input#odd');
 const evenInputRadio = document.querySelector('#odd-vs-even input#even');
 const oddVsEvenSectionFormBtn = document.querySelector('#odd-vs-even form a.my-btn');
+const oddVsEvenSectionFormResetBtn = document.querySelector('#odd-vs-even form input[text = "reset"]');
 const oddVsEvenSectionNumberInputElement = document.querySelector('#odd-vs-even input[name="number"]');
 
 
@@ -22,7 +23,8 @@ oddVsEvenSectionFormBtn.addEventListener('click' , function(){
         let finalResult = isOddOrEven(sum);
 
 
-        pElement.innerHTML = (userChoice === finalResult) ? 'Hai vinto!' : 'Hai perso!';
+        pElement.innerHTML = 
+            (userChoice === finalResult) ? 'Hai vinto!' : 'Hai perso!';
         console.log(pcNumber);
 
 
