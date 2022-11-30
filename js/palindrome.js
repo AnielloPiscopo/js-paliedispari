@@ -24,16 +24,25 @@ palindromeSectionFormBtn.addEventListener('click', function(){
 
 function isPalindrome(word){
     word = word.replace(/\s/g,'');
+
+
+    if(word === ''){
+        alert('Non hai inserito alcun valore');
+        return null;
+    }
+
+
     let reversedWord = '';
+    let convertedWordToLowerCase = String(word).toLowerCase();
 
 
-    for(let i=word.length-1 ; i>=0 ; i--){
-        reversedWord += word[i];    
+    for(let i=convertedWordToLowerCase.length-1 ; i>=0 ; i--){
+        reversedWord += convertedWordToLowerCase[i];    
     }
 
     
-    let finalComment = ((word == reversedWord) && (word != '')) ? 'La parola è palindroma' : 'La parola non è palindroma';
+    let finalComment = ((convertedWordToLowerCase == reversedWord) && (word != '')) ? 'La parola è palindroma' : 'La parola non è palindroma';
 
-    console.log(reversedWord)
+    console.log(reversedWord);
     return finalComment;
 }
