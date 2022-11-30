@@ -1,9 +1,10 @@
 const palindromeSectionTextInputElement = document.querySelector('#palindrome-word-analyser input');
 const palindromeSectionFormElement = document.querySelector('#palindrome-word-analyser form');
-const palindromeSectionFormBtnElement = document.querySelector('#palindrome-word-analyser form a.my-btn');
+const palindromeSectionFormBtn = document.querySelector('#palindrome-word-analyser form a.my-btn');
+const palindromeSectionFormResetBtn = document.querySelector('#palindrome-word-analyser form input[type = "reset"]');
 
 
-palindromeSectionFormBtnElement.addEventListener('click', function(){
+palindromeSectionFormBtn.addEventListener('click', function(){
     let userWord = palindromeSectionTextInputElement.value;
     const pElement = document.createElement('p');
     
@@ -11,6 +12,12 @@ palindromeSectionFormBtnElement.addEventListener('click', function(){
     pElement.innerHTML = isPalindrome(userWord);
 
     palindromeSectionFormElement.after(pElement);
+
+
+
+    palindromeSectionFormResetBtn.addEventListener('click' , function(){
+        pElement.remove();
+    })
 })
 
 

@@ -2,7 +2,7 @@ const oddVsEvenSectionForm = document.querySelector('#odd-vs-even form');
 const oddInputRadio = document.querySelector('#odd-vs-even input#odd');
 const evenInputRadio = document.querySelector('#odd-vs-even input#even');
 const oddVsEvenSectionFormBtn = document.querySelector('#odd-vs-even form a.my-btn');
-const oddVsEvenSectionFormResetBtn = document.querySelector('#odd-vs-even form input[text = "reset"]');
+const oddVsEvenSectionFormResetBtn = document.querySelector('#odd-vs-even form input[type = "reset"]');
 const oddVsEvenSectionNumberInputElement = document.querySelector('#odd-vs-even input[name="number"]');
 
 
@@ -30,6 +30,12 @@ oddVsEvenSectionFormBtn.addEventListener('click' , function(){
 
         oddVsEvenSectionForm.after(pElement);
     }
+
+
+
+    oddVsEvenSectionFormResetBtn.addEventListener('click' , function(){
+        pElement.remove();
+    })
 })
 
 
