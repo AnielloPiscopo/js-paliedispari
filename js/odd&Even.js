@@ -15,7 +15,7 @@ oddVsEvenSectionFormBtn.addEventListener('click' , function(){
     let controlResult = isValid(userNumber);
 
 
-    if(controlResult){
+    if(controlResult && (userChoice === 'odd' || userChoice === 'even')){
         userNumber = parseFloat(userNumber , 10);
 
         let pcNumber = getARandomNumber(1 , 5);
